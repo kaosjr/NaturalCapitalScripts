@@ -73,8 +73,6 @@ recipes.addShapeless(<Metallurgy:fertilizer>, [<ore:dustPhosphorus>, <ore:dustSa
 
 
 //Making Logistic Pipes cheaper and eliminating soldering station
-recipes.remove(<LogisticsPipes:logisticsSolidBlock>);
-
 recipes.remove(<LogisticsPipes:logisticsSolidBlock:1>);
 recipes.addShaped(<LogisticsPipes:logisticsSolidBlock:1>,
 [[<ore:ingotIron>, <ore:ingotIron>, <ore:ingotIron>],
