@@ -1,6 +1,27 @@
-//Removing IE Coke Oven and Blast Furnace TEMPORARILY
-recipes.remove(<ImmersiveEngineering:stoneDecoration:1>);
-recipes.remove(<ImmersiveEngineering:stoneDecoration:2>);
+recipes.remove(<Railcraft:machine.alpha:7>);
+recipes.remove(<Railcraft:machine.alpha:12>);
+
+//Titanium Purifier
+val titanium = <ore:dustTitanium>;
+titanium.remove(<techreborn:dust:80>);
+recipes.addShaped(<Railcraft:machine.alpha:12>,
+[[<ore:dustHOPGraphite>, <ore:ingotRefinedObsidian>, <ore:dustHOPGraphite>],
+[<ore:ingotRefinedObsidian>, <Railcraft:brick.bleachedbone>, <ore:ingotRefinedObsidian>],
+[<ore:dustHOPGraphite>, <ore:ingotRefinedObsidian>, <ore:dustHOPGraphite>]]);
+mods.railcraft.BlastFurnace.addRecipe(<techreborn:dust:80>, false, false, 1200, <techreborn:ingot:27>);
+mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:ingot>);
+mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:part.gear:2>);
+mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:nugget:1>);
+mods.railcraft.BlastFurnace.removeRecipe(<Railcraft:cube:2>);
+furnace.setFuel(<ore:dustMagnesium>, 1200);
+mods.railcraft.BlastFurnace.addFuel(<ore:dustMagnesium>);
+mods.railcraft.BlastFurnace.removeFuel(<Railcraft:fuel.coke>);
+mods.railcraft.BlastFurnace.removeFuel(<minecraft:coal:1>);
+mods.railcraft.BlastFurnace.removeFuel(<Railcraft:cube>);
+mods.railcraft.BlastFurnace.removeFuel(<ImmersiveEngineering:material:6>);
+mods.railcraft.BlastFurnace.removeFuel(<Railcraft:firestone.refined:*>);
+mods.railcraft.BlastFurnace.removeFuel(<Railcraft:firestone.cracked:*>);
+
 
 //Blast Furnace
 recipes.remove(<Railcraft:brick.infernal:2>);			
@@ -8,11 +29,13 @@ recipes.addShaped(<Railcraft:brick.infernal:2>,
 [[<minecraft:clay_ball>, <minecraft:brick>, <minecraft:clay_ball>],
 [<minecraft:brick>, <ore:fuelCoke>, <minecraft:brick>],
 [<minecraft:clay_ball>, <minecraft:brick>, <minecraft:clay_ball>]]);
-recipes.remove(<Railcraft:machine.alpha:12>);			
-recipes.addShaped(<Railcraft:machine.alpha:12>,
-[[<Railcraft:brick.infernal>, <Railcraft:brick.infernal>],
-[<Railcraft:brick.infernal>, <Railcraft:brick.infernal>]]);
+recipes.remove(<ImmersiveEngineering:stoneDecoration:2>);			
+recipes.addShaped(<ImmersiveEngineering:stoneDecoration:2>,
+[[null, <minecraft:brick>, null],
+[<minecraft:brick>, <Railcraft:brick.infernal>, <minecraft:brick>],
+[null, <minecraft:brick>, null]]);
 mods.railcraft.RockCrusher.removeRecipe(<Railcraft:machine.alpha:12>);
+mods.immersiveengineering.BlastFurnace.addRecipe(<Railcraft:part.gear:2>, <ore:gearIron>, 4800);
 
 //Coke Oven
 recipes.remove(<Railcraft:brick.sandy:2>);			
@@ -20,17 +43,18 @@ recipes.addShaped(<Railcraft:brick.sandy:2>,
 [[<minecraft:sand>, <minecraft:brick>, <minecraft:sand>],
 [<minecraft:brick>, <minecraft:sand>, <minecraft:brick>],
 [<minecraft:sand>, <minecraft:brick>, <minecraft:sand>]]);
-recipes.remove(<Railcraft:machine.alpha:7>);			
-recipes.addShaped(<Railcraft:machine.alpha:7>,
-[[<Railcraft:brick.sandy>, <Railcraft:brick.sandy>],
-[<Railcraft:brick.sandy>, <Railcraft:brick.sandy>]]);
+recipes.remove(<ImmersiveEngineering:stoneDecoration:1>);			
+recipes.addShaped(<ImmersiveEngineering:stoneDecoration:1>,
+[[null, <globbypotato_rockhounding:globbypotato_rockhounding_tierItems:5>, null],
+[<globbypotato_rockhounding:globbypotato_rockhounding_tierItems:5>, <Railcraft:brick.sandy>, <globbypotato_rockhounding:globbypotato_rockhounding_tierItems:5>],
+[null, <globbypotato_rockhounding:globbypotato_rockhounding_tierItems:5>, null]]);
 mods.railcraft.RockCrusher.removeRecipe(<Railcraft:machine.alpha:7>);
 
 //Seared Bricks
 furnace.remove(<TConstruct:materials:2>);
 mods.thermalexpansion.Furnace.removeRecipe(<TConstruct:CraftedSoil:1>);
 mods.tconstruct.Casting.removeTableRecipe(<TConstruct:materials:2>);
-mods.railcraft.BlastFurnace.addRecipe(<minecraft:brick>, false, false, 400, <TConstruct:materials:2>);
+mods.immersiveengineering.BlastFurnace.addRecipe(<TConstruct:materials:2>, <TConstruct:CraftedSoil:1>, 400);
 
 //Rock Crusher
 recipes.remove(<Metallurgy:base.dust:5>);
@@ -65,6 +89,7 @@ mods.railcraft.Rolling.addShapeless(<techreborn:plates:20>, [<ore:ingotOsmium>])
 mods.railcraft.Rolling.addShapeless(<techreborn:plates:22>, [<ore:ingotPlatinum>]);
 mods.railcraft.Rolling.addShapeless(<techreborn:plates:24>, [<ore:ingotRedstone>]);
 mods.railcraft.Rolling.addShapeless(<techreborn:plates:24>, [<ore:ingotRedstoneAlloy>]);
+mods.railcraft.Rolling.addShapeless(<techreborn:plates:24>, [<ore:ingotRedAlloy>]);
 mods.railcraft.Rolling.addShapeless(<techreborn:plates:28>, [<ore:ingotSilver>]);
 mods.railcraft.Rolling.addShapeless(<techreborn:plates:29>, [<ore:ingotSteel>]);
 mods.railcraft.Rolling.addShapeless(<techreborn:plates:31>, [<ore:ingotTin>]);
