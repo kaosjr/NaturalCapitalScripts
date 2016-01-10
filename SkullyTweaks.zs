@@ -2,6 +2,10 @@ recipes.remove(<Railcraft:machine.alpha:7>);
 recipes.remove(<Railcraft:machine.alpha:12>);
 
 //Titanium Purifier
+game.setLocalization("railcraft.gui.blast.furnace", "Titanium Purifier");
+<techreborn:dust:80>.displayName = "Impure Titanium Dust";
+<Railcraft:machine.alpha:12>.displayName = "Titanium Purifier Brick";
+<techreborn:smallDust:81>.displayName = "Small Pile of Impure Titanium Dust";
 val titanium = <ore:dustTitanium>;
 titanium.remove(<techreborn:dust:80>);
 recipes.addShaped(<Railcraft:machine.alpha:12>,
