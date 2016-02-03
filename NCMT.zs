@@ -19,11 +19,7 @@ recipes.addShaped(<BuildCraft|Core:stoneGearItem>,
 
 recipes.remove(<ThermalFoundation:material:12>);	
 
-recipes.remove(<bcadditions:wireIronUnhardened>);			
-recipes.addShaped(<bcadditions:wireIronUnhardened>*3,
-[[<ore:dustIron>, <ore:dustIron>, <ore:dustIron>],
-[<Calculator:ReinforcedIronIngot>, <Calculator:ReinforcedIronIngot>, <Calculator:ReinforcedIronIngot>],
-[<ore:dustIron>, <ore:dustIron>, <ore:dustIron>]]);
+
 
 //<ore:dustIron>
 
@@ -55,9 +51,7 @@ NEI.hide(<appliedenergistics2:item.ItemFacade>);
 NEI.hide(<ThermalExpansion:florb>);	
 NEI.addEntry(<ThermalExpansion:florb>);
 
-NEI.hide(<bcadditions:goldCanister>);
-NEI.hide(<bcadditions:diamondCanister>);
-NEI.hide(<bcadditions:ironCanister>);
+
 
 
 recipes.remove(<techreborn:part:21>);
@@ -95,6 +89,8 @@ recipes.remove(<ThermalExpansion:Machine:8>);
 
 mods.techreborn.centrifuge.addRecipe(<techreborn:smallDust:38>*32, <ImmersiveEngineering:metal:16>*4, <ThermalExpansion:material:515>*4, <BiomesOPlenty:misc:1>*20, <minecraft:lava_bucket>, null, 2000, 20);
 
+mods.techreborn.centrifuge.addRecipe(null, null, <techreborn:cell:15>*4, null,<minecraft:clay>*60, null, 2000, 20);
+
 recipes.remove(<Calculator:CraftingCalculator>);	
 recipes.remove(<Mekanism:MachineBlock:4>);	
 
@@ -103,6 +99,18 @@ mods.techreborn.centrifuge.addRecipe(<minecraft:bucket>, <minecraft:flint>*32, <
 mods.techreborn.centrifuge.addRecipe(<minecraft:bucket>, <techreborn:smallDust:70>*12, <appliedenergistics2:item.ItemMultiMaterial:5>*5, <appliedenergistics2:item.ItemCrystalSeed>.withTag({progress: 0}), <minecraft:sand>*32, <hot_water:bucket_hot_water>, 550, 10);
 
 mods.techreborn.centrifuge.addRecipe(<minecraft:bucket>, <Mekanism:DirtyDust:2>*3, <Mekanism:DirtyDust:3>*5, <Mekanism:DirtyDust:5>, <minecraft:dirt>*32, <hot_water:bucket_hot_water>, 550, 10);
+
+mods.techreborn.centrifuge.addRecipe(null, <techreborn:cell:27>, null, null, <Magneticraft:item.dustSalt>*4, <hot_water:bucket_hot_water>, 4200, 10);
+
+mods.techreborn.centrifuge.addRecipe(null, <techreborn:cell:30>, null, null, <Metallurgy:utility.item>*4, <hot_water:bucket_hot_water>, 5500, 10);
+
+mods.techreborn.centrifuge.addRecipe(null, <techreborn:cell:4>, null, null, <Railcraft:dust:3>*12, <hot_water:bucket_hot_water>, 2500, 10);
+
+mods.techreborn.centrifuge.addRecipe(null, <techreborn:cell:28>, null, null, <techreborn:cell:29>*4, <techreborn:cell:5>, 2500, 1000);
+
+mods.techreborn.industrialElectrolyzer.addRecipe(null, <techreborn:cell:5>, <techreborn:cell:13>, <Magneticraft:item.dustSalt>, <minecraft:potion>, null, 800, 100);
+
+
 
 
 recipes.remove(<techreborn:machinecasing>);			
@@ -210,11 +218,7 @@ recipes.addShaped(<BuildCraft|Builders:machineBlock>,
 [<BuildCraft|Core:diamondGearItem>, <Railcraft:cube:7>, <BuildCraft|Core:diamondGearItem>],
 [<BuildCraft|Core:markerBlock>, <ThermalFoundation:material:132>, <BuildCraft|Core:markerBlock>]]);
 
-recipes.remove(<techreborn:grinder>);			
-recipes.addShaped(<techreborn:grinder>,
-[[<techreborn:machinecasing:1>, <bcadditions:grindingWheel>, <techreborn:machinecasing:1>],
-[<bcadditions:grindingWheel>, <ThermalExpansion:Frame>, <bcadditions:grindingWheel>],
-[<techreborn:machinecasing:1>, <bcadditions:grindingWheel>, <techreborn:machinecasing:1>]]);
+
 
 NEI.hide(<evilcraft:bucketEternalWater>); 
 recipes.remove(<evilcraft:bucketEternalWater>); 
@@ -264,7 +268,7 @@ NEI.hide(<TConstruct:hatchet>);
 NEI.hide(<TConstruct:cleaver>);
 
         
-
+NEI.hide(<ThermalExpansion:Machine>);
 
 
 
@@ -294,17 +298,12 @@ recipes.remove(<Mekanism:SpeedUpgrade>);
 NEI.hide(<Calculator:SpeedUpgrade>); 
 recipes.remove(<Calculator:SpeedUpgrade>);   
 
-NEI.hide(<bcadditions:upgrade:4>); 
-recipes.remove(<bcadditions:upgrade:4>);   
+
 
 NEI.hide(<Magneticraft:item.inserter_item_speed_upgrade>); 
 recipes.remove(<Magneticraft:item.inserter_item_speed_upgrade>);     
 
-NEI.hide(<bcadditions:upgrade:5>); 
-recipes.remove(<bcadditions:upgrade:5>);   
 
-NEI.hide(<bcadditions:upgrade:6>); 
-recipes.remove(<bcadditions:upgrade:6>);  
 
 NEI.hide(<Magneticraft:InfiniteWater>); 
 recipes.remove(<Magneticraft:InfiniteWater>); 
@@ -381,8 +380,21 @@ mods.railcraft.CokeOven.addRecipe(<TConstruct:materials:2>,<liquid:coal> * 20, <
 
 mods.railcraft.CokeOven.addRecipe(<BiomesOPlenty:misc>,<liquid:coal> * 20, <minecraft:dirt>, 1000);	
 
+mods.railcraft.CokeOven.addRecipe(<Natura:heatsand>,<liquid:coal> * 20, <minecraft:sand>, 1000);
+
+mods.railcraft.CokeOven.addRecipe(<techreborn:smallDust:66>,<liquid:fluidsilicon> * 20, <globbypotato_rockhounding:globbypotato_rockhounding_miscItems:7>, 1000);		
+
+
+
 mods.railcraft.Rolling.removeRecipe(<Railcraft:part.plate>);
 mods.railcraft.Rolling.addShapeless(<Railcraft:part.plate>, [<minecraft:iron_ingot>]);
+
+mods.railcraft.Rolling.removeRecipe(<Railcraft:part.rail:3>);
+mods.railcraft.Rolling.addShaped(<Railcraft:part.rail:3>,
+[[<Railcraft:part.rail:4>, <Railcraft:part.rail:1>, <Railcraft:part.rail:5>],
+[<Railcraft:part.rail:4>, <Railcraft:part.rail:1>, <Railcraft:part.rail:5>],
+[<Railcraft:part.rail:4>, <Railcraft:part.rail:1>, <Railcraft:part.rail:5>]]);
+
 
 recipes.remove(<globbypotato_rockhounding:globbypotato_rockhounding_miscItems:124>); 
 
@@ -391,6 +403,9 @@ recipes.remove(<globbypotato_rockhounding:globbypotato_rockhounding_miscItems:12
 mods.railcraft.RockCrusher.addRecipe(<minecraft:sand>, false, false, [<globbypotato_rockhounding:globbypotato_rockhounding_miscItems:124>, <globbypotato_rockhounding:globbypotato_rockhounding_miscItems:7>], [0.8, 0.5]);
 
 mods.railcraft.RockCrusher.addRecipe(<globbypotato_rockhounding:globbypotato_rockhounding_miscItems:7>, false, false, [<techreborn:dust:63>, <techreborn:smallDust:86>], [0.5, 0.1]);
+
+mods.railcraft.RockCrusher.addRecipe(<globbypotato_rockhounding:globbypotato_rockhounding_wildBlocks:6>, false, false, [<minecraft:sand>*5, <ImmersiveEngineering:metal:18>, <techreborn:smallDust:70>], [1.2, 0.1, 0.3]);
+
 
 recipes.remove(<BuildCraft|Core:ironGearItem>);			
 recipes.addShaped(<BuildCraft|Core:ironGearItem>,
@@ -435,9 +450,9 @@ mods.appeng.Inscriber.addRecipe([<appliedenergistics2:item.ItemMultiMaterial:18>
 
 mods.appeng.Inscriber.addRecipe([<Mekanism:ControlCircuit>], <appliedenergistics2:item.ItemMultiMaterial:20>, <appliedenergistics2:item.ItemMultiMaterial:20>, <techreborn:part:1>, "Inscribe");
 
-mods.appeng.Inscriber.addRecipe([<Mekanism:ControlCircuit:1>], <techreborn:part:1>, <techreborn:part:1>, <techreborn:part:2>, "Inscribe");
+mods.appeng.Inscriber.addRecipe([<Mekanism:ControlCircuit:1>], <appliedenergistics2:item.ItemMultiMaterial:23>, <techreborn:part:1>, <techreborn:part:2>, "Inscribe");
 
-mods.appeng.Inscriber.addRecipe([<Mekanism:ControlCircuit:2>], <techreborn:part:2>, <techreborn:part:2>, <techreborn:part:3>, "Inscribe");
+mods.appeng.Inscriber.addRecipe([<Mekanism:ControlCircuit:2>], <appliedenergistics2:item.ItemMultiMaterial:22>, <techreborn:part:2>, <techreborn:part:3>, "Inscribe");
 
 recipes.remove(<minecraft:crafting_table>);			
 
@@ -464,9 +479,9 @@ recipes.addShaped(<Magneticraft:inserter>,
 
 
 
-val densedensity = 12;
+val densedensity = 16;
 
-val densehardness = 65;
+val densehardness = 120;
 
 MTUtils.clearDrops();
 
@@ -482,6 +497,16 @@ MTUtils.setHardness(<minecraft:redstone_ore>, densehardness);
 MTUtils.setHardness(<minecraft:diamond_ore>, densehardness);
 MTUtils.setHardness(<BiomesOPlenty:gemOre:2>, densehardness);
 
+MTUtils.setHardness(<Metallurgy:fantasy.ore:*>, densehardness);
+MTUtils.setHardness(<Metallurgy:utility.ore:*>, densehardness);
+
+MTUtils.setHardness(<Metallurgy:base.ore:*>, densehardness);
+MTUtils.setHardness(<Metallurgy:precious.ore:*>, densehardness);
+MTUtils.setHardness(<minecraft:emerald_ore>, densehardness);
+
+
+
+
  
 MTUtils.setBlockDrops(null, <denseores:block0:0>, [<minecraft:iron_ore>*densedensity], [1.5], [<minecraft:iron_ore>*densedensity]);
 
@@ -496,13 +521,23 @@ MTUtils.setBlockDrops(null, <denseores:block0:6>, [<minecraft:coal>*densedensity
 //diamond-redstone
 MTUtils.setBlockDrops(null, <denseores:block0:1>, [<minecraft:gold_ore>*densedensity], [1.5], [<minecraft:gold_ore>*densedensity]);
 
-MTUtils.setBlockDrops(null, <denseores:block0:2>, [<minecraft:lapis_ore>*densedensity], [1.5], [<minecraft:lapis_ore>*densedensity]);
+MTUtils.setBlockDrops(null, <denseores:block0:2>, [<minecraft:dye:4>*32], [1.5], [<minecraft:dye:4>*densedensity]);
 
-MTUtils.setBlockDrops(null, <denseores:block0:5>, [<minecraft:redstone_ore>*densedensity], [1.5], [<minecraft:redstone_ore>*densedensity]);
+MTUtils.setBlockDrops(null, <denseores:block0:5>, [<minecraft:redstone>*32], [1.5], [<minecraft:redstone>*32]);
 
-//MTUtils.setBlockDrops(null, <denseores:block0:3>, [<minecraft:diamond>*densedensity], [1.5], [<minecraft:diamond>*densedensity]);
+MTUtils.setBlockDrops(null, <denseores:block0:3>, [<minecraft:diamond>*densedensity], [1.5], [<minecraft:diamond>*densedensity]);
 
-MTUtils.setBlockDrops(null, <denseores:block0:10>, [<BiomesOPlenty:gemOre:2>*densedensity], [1.5], [<BiomesOPlenty:gemOre:2>*densedensity]);
+MTUtils.setBlockDrops(null, <denseores:block0:10>, [<BiomesOPlenty:gems:1>*densedensity], [1.5], [<BiomesOPlenty:gems:1>*densedensity]);
+
+MTUtils.setBlockDrops(null, <denseores:block5:7>, [<ThermalFoundation:Ore:4>*densedensity], [1.5], [<ThermalFoundation:Ore:4>*densedensity]);
+
+MTUtils.setBlockDrops(null, <denseores:block5:5>, [<ThermalFoundation:Ore:2>*densedensity], [1.5], [<ThermalFoundation:Ore:2>*densedensity]);
+
+MTUtils.setBlockDrops(null, <denseores:block5:6>, [<ThermalFoundation:Ore:3>], [1.5], [<ThermalFoundation:Ore:3>*densedensity]);
+
+MTUtils.setBlockDrops(null, <denseores:block0:12>, [<BiomesOPlenty:gems:3>], [1.5], [<BiomesOPlenty:gems:3>*densedensity]);
+
+
 
 
 
@@ -521,11 +556,6 @@ furnace.remove(<*>, <TConstruct:CraftedSoil:1>);
 
 
 
-NEI.hide(<ezstorage:crafting_box>); 
-recipes.remove(<ezstorage:crafting_box>); 
-
-NEI.hide(<ezstorage:input_port>); 
-recipes.remove(<ezstorage:input_port>); 
 
 NEI.hide(<Natura:Natura.workbench:*>); 
 recipes.remove(<Natura:Natura.workbench:*>); 
@@ -541,12 +571,7 @@ recipes.addShaped(<TConstruct:ToolStationBlock>,
 [[<TConstruct:blankPattern>, <TConstruct:blankPattern>, <TConstruct:blankPattern>],
 [<TConstruct:blankPattern>, <BuildCraft|Factory:autoWorkbenchBlock>, <TConstruct:blankPattern>],
 [<TConstruct:blankPattern>, <TConstruct:blankPattern>, <TConstruct:blankPattern>]]);
-
-recipes.remove(<MetallurgyCore:metallurgyCore.oreFinder>);			
-recipes.addShaped(<MetallurgyCore:metallurgyCore.oreFinder>,
-[[null, null ,<Railcraft:fluid.creosote.bottle> ],
-[null, <ImmersiveEngineering:material>, null],
-[<ImmersiveEngineering:material>, null, null]]);		
+		
 
 
 
@@ -579,3 +604,140 @@ MTUtils.setHarvestLevel(<globbypotato_rockhounding:globbypotato_rockhounding_tie
 MTUtils.setHarvestLevel(<globbypotato_rockhounding:globbypotato_rockhounding_tierOres:7>, null, 2);
 
 MTUtils.setHarvestLevel(<globbypotato_rockhounding:globbypotato_rockhounding_tierOres:8>, null, 2);
+
+recipes.remove(<minecraft:wooden_pickaxe>);
+recipes.addShaped(<minecraft:wooden_pickaxe>,
+[[<ore:plankWood>, <ore:plankWood>],
+[<ore:stickWood>, <ore:plankWood>]]);
+
+recipes.remove(<minecraft:wooden_axe>);
+recipes.addShaped(<minecraft:wooden_axe>,
+[[<ore:plankWood>, <ore:plankWood>],
+[<ore:plankWood>, <ore:stickWood>]]);
+
+recipes.remove(<minecraft:wooden_hoe>);
+recipes.addShaped(<minecraft:wooden_hoe>,
+[[<ore:plankWood>, <ore:plankWood>],
+[null, <ore:stickWood>]]);
+
+recipes.remove(<minecraft:wooden_shovel>);
+recipes.addShaped(<minecraft:wooden_shovel>,
+[[null, <ore:plankWood>],
+[<ore:stickWood>, null]]);
+
+
+
+recipes.remove(<minecraft:stone_pickaxe>);
+recipes.addShaped(<minecraft:stone_pickaxe>,
+[[<ore:cobblestone>, <ore:cobblestone>],
+[<ore:stickWood>, <ore:cobblestone>]]);
+
+recipes.remove(<minecraft:stone_axe>);
+recipes.addShaped(<minecraft:stone_axe>,
+[[<ore:cobblestone>, <ore:cobblestone>],
+[<ore:cobblestone>, <ore:stickWood>]]);
+
+recipes.remove(<minecraft:stone_hoe>);
+recipes.addShaped(<minecraft:stone_hoe>,
+[[<ore:cobblestone>, <ore:cobblestone>],
+[null, <ore:stickWood>]]);
+
+recipes.remove(<minecraft:stone_shovel>);
+recipes.addShaped(<minecraft:stone_shovel>,
+[[null, <ore:cobblestone>],
+[<ore:stickWood>, null]]);
+
+recipes.remove(<globbypotato_rockhounding:globbypotato_rockhounding_wildBlocks:6>);
+
+furnace.addRecipe(<globbypotato_rockhounding:globbypotato_rockhounding_wildBlocks:6>, <minecraft:sandstone>);
+
+vanilla.seeds.addSeed(<plantmegapack:groundcoverGrassGRNLT>.weight(20));
+vanilla.seeds.addSeed(<plantmegapack:groundcoverGrassGRNDK>.weight(20));
+vanilla.seeds.addSeed(<plantmegapack:grassMeadow>.weight(20));
+vanilla.seeds.addSeed(<BiomesOPlenty:food:2>.weight(5));
+
+recipes.remove(<Railcraft:brick.sandy>);			
+recipes.addShaped(<Railcraft:brick.sandy>,
+[[<minecraft:brick_block>, <globbypotato_rockhounding:globbypotato_rockhounding_wildBlocks:6>, <minecraft:brick_block>],
+[<globbypotato_rockhounding:globbypotato_rockhounding_wildBlocks:6>, <minecraft:brick_block>, <globbypotato_rockhounding:globbypotato_rockhounding_wildBlocks:6>],
+[<minecraft:brick_block>, <globbypotato_rockhounding:globbypotato_rockhounding_wildBlocks:6>, <minecraft:brick_block>]]);	
+
+recipes.remove(<Railcraft:machine.alpha:7>);			
+recipes.addShaped(<Railcraft:machine.alpha:7>,
+[[<Railcraft:brick.sandy>, <Railcraft:brick.sandy>, <Railcraft:brick.sandy>],
+[<Railcraft:brick.sandy>, null, <Railcraft:brick.sandy>],
+[<Railcraft:brick.sandy>, <Railcraft:brick.sandy>, <Railcraft:brick.sandy>]]);	
+
+recipes.addShaped(<customthings:item:1>,
+[[<customthings:item>, <customthings:item>, <customthings:item>],
+[<customthings:item>, <customthings:item>, <customthings:item>],
+[<customthings:item>, <customthings:item>, <customthings:item>]]);	
+
+recipes.addShaped(<customthings:item:2>,
+[[<customthings:item:1>, <customthings:item:1>, <customthings:item:1>],
+[<customthings:item:1>, <customthings:item:1>, <customthings:item:1>],
+[<customthings:item:1>, <customthings:item:1>, <customthings:item:1>]]);	
+
+recipes.addShaped(<customthings:item:3>,
+[[<customthings:item:2>, <customthings:item:2>, <customthings:item:2>],
+[<customthings:item:2>, <customthings:item:2>, <customthings:item:2>],
+[<customthings:item:2>, <customthings:item:2>, <customthings:item:2>]]);	
+
+recipes.addShaped(<customthings:item:4>,
+[[<customthings:item:3>, <customthings:item:3>, <customthings:item:3>],
+[<customthings:item:3>, <customthings:item:3>, <customthings:item:3>],
+[<customthings:item:3>, <customthings:item:3>, <customthings:item:3>]]);	
+
+recipes.addShaped(<customthings:item:5>,
+[[<customthings:item:4>, <customthings:item:4>, <customthings:item:4>],
+[<customthings:item:4>, <customthings:item:4>, <customthings:item:4>],
+[<customthings:item:4>, <customthings:item:4>, <customthings:item:4>]]);	
+
+recipes.addShaped(<customthings:item:6>,
+[[<customthings:item:5>, <customthings:item:5>, <customthings:item:5>],
+[<customthings:item:5>, <customthings:item:5>, <customthings:item:5>],
+[<customthings:item:5>, <customthings:item:5>, <customthings:item:5>]]);	
+
+recipes.addShaped(<customthings:item:7>,
+[[<customthings:item:6>, <customthings:item:6>, <customthings:item:6>],
+[<customthings:item:6>, <customthings:item:6>, <customthings:item:6>],
+[<customthings:item:6>, <customthings:item:6>, <customthings:item:6>]]);	
+
+recipes.addShapeless(<customthings:item:6>*9, [<customthings:item:7>]);
+recipes.addShapeless(<customthings:item:5>*9, [<customthings:item:6>]);
+recipes.addShapeless(<customthings:item:4>*9, [<customthings:item:5>]);
+recipes.addShapeless(<customthings:item:3>*9, [<customthings:item:4>]);
+recipes.addShapeless(<customthings:item:2>*9, [<customthings:item:3>]);
+recipes.addShapeless(<customthings:item:1>*9, [<customthings:item:2>]);
+recipes.addShapeless(<customthings:item:0>*9, [<customthings:item:1>]);
+
+recipes.remove(<minecraft:rail>);			
+recipes.addShaped(<minecraft:rail> * 16,
+[[<Railcraft:part.rail>, <Railcraft:part.railbed>, <Railcraft:part.rail>],
+[<Railcraft:part.rail>, <Railcraft:part.railbed>, <Railcraft:part.rail>],
+[<Railcraft:part.rail>, <Railcraft:part.railbed>, <Railcraft:part.rail>]]);
+
+recipes.remove(<minecraft:potion>);
+
+recipes.remove(<betterbuilderswands:wandDiamond>);	
+recipes.remove(<betterbuilderswands:wandIron>);
+recipes.remove(<betterbuilderswands:wandStone>);
+recipes.remove(<betterbuilderswands:wandUnbreakable>);
+
+recipes.addShapeless(<AgriCraft:seedPotato>.withTag({strength: 100 as short, analyzed: 1 as byte, growth: 100 as short, gain: 100 as short}), [<minecraft:tallgrass:1>]);
+
+recipes.remove(<BuildCraft|Transport:item.buildcraftPipe.pipefluidsvoid>);
+
+recipes.remove(<evilcraft:effortlessRing>);
+
+recipes.remove(<Railcraft:machine.alpha:8>);			
+recipes.addShaped(<Railcraft:machine.alpha:8>,
+[[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>],
+[<minecraft:iron_ingot>, <BuildCraft|Factory:autoWorkbenchBlock>, <minecraft:iron_ingot>],
+[<minecraft:iron_ingot>, <minecraft:iron_ingot>, <minecraft:iron_ingot>]]);	
+
+recipes.remove(<HelperToolsID:staffofexpansion>);
+recipes.remove(<HelperToolsID:staffoftransformation2>);
+recipes.remove(<powersuits:tile.tinkerTable>);
+recipes.remove(<Magneticraft:ShelvingUnit>);
+recipes.remove(<NotEnoughWands:WandCore>);
