@@ -106,28 +106,5 @@ recipes.addShaped(<LogisticsPipes:logisticsSolidBlock:11>,
 [<ore:ingotGold>, <minecraft:redstone_block>, <ore:ingotGold>],
 [<minecraft:paper>, <ore:ingotSilver>, <minecraft:paper>]]);
 
-
-
-//Removing alloy dusts
-recipes.remove(<Magneticraft:item.dustBrass>);
-recipes.remove(<Metallurgy:base.dust:4>);
-recipes.remove(<Metallurgy:base.dust:6>);
-recipes.remove(<Metallurgy:ender.dust:2>);
-recipes.remove(<Metallurgy:fantasy.dust:3>);
-recipes.remove(<Metallurgy:fantasy.dust:10>);
-recipes.remove(<Metallurgy:nether.dust:10>);
-recipes.remove(<Metallurgy:nether.dust:11>);
-recipes.remove(<Metallurgy:precious.dust:3>);
-recipes.remove(<TConstruct:materials:41>);
-recipes.remove(<TConstruct:materials:42>);
-recipes.remove(<bcadditions:dust:4>);
-recipes.remove(<bcadditions:dust:69>);
-recipes.remove(<bcadditions:dust:67>);
-recipes.remove(<bcadditions:dust:66>);
-recipes.remove(<bcadditions:dust:47>);
-recipes.remove(<bcadditions:dust:70>);
-recipes.remove(<bcadditions:dust:71>);
-recipes.remove(<bcadditions:dust:72>);
-recipes.remove(<bcadditions:dust:73>);
-recipes.remove(<bcadditions:dust:83>);
-recipes.remove(<bcadditions:dust:91>);
+//Remove Metallurgic Infuser recipe
+recipes.remove(<Mekanism:MachineBlock:8>);
