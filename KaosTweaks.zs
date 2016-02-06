@@ -5,6 +5,9 @@ recipes.addShaped(<MetallurgyCore:metallurgyCore.oreFinder>,
 [<ImmersiveEngineering:material>, null, null]]);
 
 
+//Removing default auto workbench recipe so people aren't confused
+recipes.remove(<BuildCraft|Factory:autoWorkbenchBlock>);
+
 
 //Removing Mekanism transport pipes
 recipes.remove(<Mekanism:PartTransmitter:12>);
@@ -13,7 +16,6 @@ recipes.remove(<Mekanism:PartTransmitter:14>);
 recipes.remove(<Mekanism:PartTransmitter:15>);
 recipes.remove(<Mekanism:PartTransmitter:16>);
 recipes.remove(<Mekanism:PartTransmitter:17>);
-
 
 
 //Removing Inventory Pets recipes
@@ -65,11 +67,9 @@ recipes.remove(<InventoryPets:petDubstep>);
 recipes.remove(<InventoryPets:petCustom>);
 
 
-
 //Nerfing Metallurgy Fertilizer
 recipes.remove(<Metallurgy:fertilizer>);
 recipes.addShapeless(<Metallurgy:fertilizer>, [<ore:dustPhosphorus>, <ore:dustSaltpeter>, <ore:dustPotash>, <ore:dustMagnesium>]);
-
 
 
 //Making Logistic Pipes cheaper and eliminating soldering station
@@ -106,5 +106,64 @@ recipes.addShaped(<LogisticsPipes:logisticsSolidBlock:11>,
 [<ore:ingotGold>, <minecraft:redstone_block>, <ore:ingotGold>],
 [<minecraft:paper>, <ore:ingotSilver>, <minecraft:paper>]]);
 
+
 //Remove Metallurgic Infuser recipe
 recipes.remove(<Mekanism:MachineBlock:8>);
+
+
+//Removing crafting table-using recipes and adding recipes that use auto-workbench
+recipes.remove(<appliedenergistics2:tile.BlockMolecularAssembler>);
+recipes.addShaped(<appliedenergistics2:tile.BlockMolecularAssembler>,
+[[<minecraft:iron_ingot>, <appliedenergistics2:tile.BlockQuartzGlass>, <minecraft:iron_ingot>],
+[<appliedenergistics2:item.ItemMultiMaterial:44>, <BuildCraft|Factory:autoWorkbenchBlock>, <appliedenergistics2:item.ItemMultiMaterial:43>],
+[<minecraft:iron_ingot>, <appliedenergistics2:tile.BlockQuartzGlass>, <minecraft:iron_ingot>]]);
+
+recipes.remove(<appliedenergistics2:item.ItemMultiPart:360>);
+recipes.addShapeless(<appliedenergistics2:item.ItemMultiPart:360>, [<appliedenergistics2:item.ItemMultiPart:380>, <BuildCraft|Factory:autoWorkbenchBlock>, <appliedenergistics2:item.ItemMultiMaterial:23>]);
+
+recipes.remove(<appliedenergistics2:item.ItemMultiMaterial:53>);
+recipes.addShapeless(<appliedenergistics2:item.ItemMultiMaterial:53>, [<appliedenergistics2:item.ItemMultiMaterial:25>, <BuildCraft|Factory:autoWorkbenchBlock>]);
+
+recipes.remove(<Railcraft:machine.epsilon:5>);
+recipes.addShaped(<Railcraft:machine.epsilon:5>,
+[[<minecraft:diamond_pickaxe>, <Railcraft:part.plate:1>, <minecraft:book>],
+[<Railcraft:part.plate:1>, <BuildCraft|Factory:autoWorkbenchBlock>, <Railcraft:part.plate:1>],
+[<minecraft:piston>, <Railcraft:part.plate:1>, <minecraft:piston>]]);
+
+recipes.remove(<Avaritia:Double_Craft>);
+recipes.addShaped(<Avaritia:Double_Craft>,
+[[<BuildCraft|Factory:autoWorkbenchBlock>, <BuildCraft|Factory:autoWorkbenchBlock>, <BuildCraft|Factory:autoWorkbenchBlock>],
+[<BuildCraft|Factory:autoWorkbenchBlock>, <BuildCraft|Factory:autoWorkbenchBlock>, <BuildCraft|Factory:autoWorkbenchBlock>],
+[<BuildCraft|Factory:autoWorkbenchBlock>, <BuildCraft|Factory:autoWorkbenchBlock>, <BuildCraft|Factory:autoWorkbenchBlock>]]);
+
+recipes.remove(<cookingbook:recipebook:1>);
+recipes.addShaped(<cookingbook:recipebook:1>,
+[[null, <BuildCraft|Factory:autoWorkbenchBlock>, null],
+[<minecraft:diamond>, <cookingbook:recipebook>, <minecraft:diamond>],
+[null, <BuildCraft|Factory:autoWorkbenchBlock>, null]]);
+
+recipes.remove(<LogisticsPipes:logisticsSolidBlock>);
+recipes.addShaped(<LogisticsPipes:logisticsSolidBlock>,
+[[<minecraft:iron_ingot>, <BuildCraft|Factory:autoWorkbenchBlock>, <minecraft:iron_ingot>],
+[<minecraft:iron_ingot>, null, <minecraft:iron_ingot>],
+[<minecraft:iron_ingot>, <minecraft:redstone>, <minecraft:iron_ingot>]]);
+
+recipes.remove(<ThermalExpansion:Workbench:1>);
+recipes.addShaped(<ThermalExpansion:Workbench:1>,
+[[null, <minecraft:paper>, null],
+[<ore:ingotCopper>, <BuildCraft|Factory:autoWorkbenchBlock>, <ore:ingotCopper>],
+[null, <ThermalExpansion:Strongbox:1>, null]]);
+recipes.addShaped(<ThermalExpansion:Workbench:1>,
+[[<ore:ingotTin>, <minecraft:paper>, <ore:ingotTin>],
+[<ore:ingotCopper>, <BuildCraft|Factory:autoWorkbenchBlock>, <ore:ingotCopper>],
+[<ore:ingotTin>, <minecraft:chest>, <ore:ingotTin>]]);
+
+recipes.remove(<ThermalExpansion:Workbench:2>);
+recipes.addShaped(<ThermalExpansion:Workbench:2>,
+[[null, <ore:ingotInvar>, null],
+[<ore:ingotInvar>, <ThermalExpansion:Workbench:1>, <ore:ingotInvar>],
+[null, <ore:ingotInvar>, null]]);
+recipes.addShaped(<ThermalExpansion:Workbench:2>,
+[[<ore:ingotInvar>, <minecraft:paper>, <ore:ingotInvar>],
+[<ore:ingotCopper>, <BuildCraft|Factory:autoWorkbenchBlock>, <ore:ingotCopper>],
+[<ore:ingotInvar>, <ThermalExpansion:Strongbox:1>, <ore:ingotInvar>]]);
